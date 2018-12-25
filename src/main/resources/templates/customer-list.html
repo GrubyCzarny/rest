@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>YO YO</title>
+</head>
+<body>
+<h3>Customer List</h3>
+<table>
+    <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last name</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="customer : ${customerList}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.firstName}"></td>
+        <td th:text="${customer.lastName}"></td>
+        <td th:text="${customer.email}"></td>
+    </tr>
+</table>
+</body>
+</html>
+<!--
+
+<tr th:each="game : ${games}">
+    <td th:text="${game.leagueName}"></td>
+    <td th:text="${game.homeName}"></td>
+    <td th:text="${game.awayName}"></td>
+    <td th:text="${game.score}"></td>
+    <td th:text="${game.time}"></td>
+</tr>-->
